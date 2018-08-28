@@ -1,1 +1,9 @@
-<h1>You are home!</h1>
+<H1>Welcome to Brandon's Blog</H1>
+<p>If you can tell stories, create characters, devise incidents, and have sincerity and passion, it doesn’t matter a damn how you write.
+    – Somerset Maugham</p>
+
+<h2>Brandon's Entries</h2>
+
+{% for post in posts.all %}
+    {{ post.title }}
+{% endfor %}
