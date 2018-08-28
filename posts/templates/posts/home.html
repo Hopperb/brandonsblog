@@ -6,4 +6,10 @@
 
 {% for post in posts.all %}
     {{ post.title }}
+    <br />
+    {{ post.created_at_beautify }}
+    <br />
+    {{ post.summary}}
+    <br />
+    <br />
 {% endfor %}

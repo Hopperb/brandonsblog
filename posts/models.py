@@ -13,7 +13,12 @@ class Post(models.Model):
     
     def __str__(self):
         return self.title
-   
+    
+    def created_at_beautify(self):
+        return self.created_at.strftime('%b %d %Y')
+
+    def summary(self):
+        return self.content[:100]
 
 class PersonalPost(Post):   # Inherits from Note!
     user = models.ForeignKey(User, on_delete=models.CASCADE)
